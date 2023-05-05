@@ -51,13 +51,14 @@ default ✓ [======================================] 200 VUs  1s
 **CloudWatch Logs Insights**   
 query-string:
 ```
-filter @type=“REPORT” and ispresent(@initDuration)
-| stats count() as coldStarts, avg(@initDuration), min(@initDuration), max(@initDuration) by bin(5m)
+filter @type="REPORT" and ispresent(@initDuration)
+| stats count() as coldStarts, avg(@maxMemoryUsed), avg(@duration), avg(@initDuration), min(@initDuration), max(@initDuration) by bin(10m)
 ```
-
-| bin(5m) | coldStarts | avg(@initDuration) | min(@initDuration) | max(@initDuration) |
-| --- | --- | --- | --- | --- |
-| 2023-05-05 16:10:00.000 | 200 | 5963.5863 | 5584.57 | 6446.62 |
+---
+| coldStarts | avg(@maxMemoryUsed) | avg(@duration) | avg(@initDuration) | min(@initDuration) | max(@initDuration) |
+|------------|---------------------|----------------|--------------------|--------------------|--------------------|
+| 200        | 201500000           | 8.0594         | 5963.5863          | 5584.57            | 6446.62            |
+---
 
 ## Getting Started
 
