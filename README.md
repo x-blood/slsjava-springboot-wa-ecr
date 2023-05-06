@@ -1,12 +1,13 @@
 # Serverless Java17 Spring Boot Web Adapter Container Example
 
-| -                           | -                              |
-|:----------------------------|--------------------------------|
-| Java                        | Java17                         |
-| Application Framework       | Spring Boot 3.0.6              |
-| Deploy Framework            | AWS SAM CLI 1.82.0             |
-| Development environment     | Ubuntu Desktop 20.04           |
-| Container build environment | Docker Desktop on Linux 4.17.0 |
+| -                       | -                              |
+|:------------------------|--------------------------------|
+| Java                    | Java17                         |
+| Application Framework   | Spring Boot 3.0.6              |
+| Deploy Framework        | AWS SAM CLI 1.82.0             |
+| Development environment | Ubuntu Desktop 20.04           |
+| » JDK for local build   | Corretto-17.0.7.7.1            |
+| » Container build       | Docker Desktop on Linux 4.17.0 |
 
 ## Result of K6
 
